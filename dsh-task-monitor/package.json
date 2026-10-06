@@ -1,0 +1,36 @@
+{
+  "name": "@local/dsh-task-monitor",
+  "version": "0.8.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH 窗口右侧独立「任务监控」浮层：环境信息 / 技能与 MCP / 产出 / 网页查阅（只读）。",
+  "icon": "./icon.svg",
+  "meta": {
+    "title": "任务监控",
+    "description": "窗口右侧的独立任务监控面板：环境信息、技能与 MCP、产出、网页查阅。"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-session"
+      ]
+    }
+  }
+}

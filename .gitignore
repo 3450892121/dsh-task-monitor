@@ -1,0 +1,22 @@
+node_modules
+dist
+build
+out
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.local
+AGENTS.local.md
+CLAUDE.local.md
+
+# 实验残留防护：sh 解析 Windows 路径失败时可能在仓库根生成这种名字的文件
+/Users*.dsh*
+
+# 本地私人文档：只留在本机供 AI 协作使用，不进公开仓库
+/AGENTS.md
+/CLAUDE.md
+/新项目启动指令（记忆增强版）.md
+/taskmonitor-自检.md
+/taskmonitor自检.docx

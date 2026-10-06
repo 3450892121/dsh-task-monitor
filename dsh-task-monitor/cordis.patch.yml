@@ -1,0 +1,6 @@
+# 任务监控插件的 bundle patch：把双面插件行插入 desktop profile 的 roster。
+# 宿主半边（exports "."）在 DSH 主进程运行（/taskmonitor 路由 + git 只读）；
+# 界面半边（exports "./client"，由 package.json 的 dsh.client 声明）在网页端加载。
+- insert:
+    - id: task-monitor
+      name: '@local/dsh-task-monitor'
